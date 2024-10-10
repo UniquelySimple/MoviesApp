@@ -1,0 +1,29 @@
+<div class="welcome-div">
+    <h1>Welcome</h1>
+    <h3>Millions of Movies, TV Shows and Web Series to discover. Explore now.</h3>
+    <input type="text" name="" placeholder="Search any movie, series ..." id="">
+    <button>Search</button>
+  </div>
+<div class="container">
+    <div class="moviesContainer">
+        <ul>
+            <li class="movie-items" *ngFor="let movie of movies; let i = index" (click)="setActiveMovie(movie, i)">
+                <div class="movie-card"><!-- routerLink="movies-details" -->
+                    <div class="image-section">
+                        <img src="{{movie.poster}}" alt="Cannot fetch image">
+                    </div>
+                    <div class="content-section">
+                        <h6>{{ movie.title }}</h6>
+                        <p>{{ movie.year }}
+                        <p>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+    <div class="load-section">
+        <input type="button" value="Load More">
+    </div>
+    
+</div>

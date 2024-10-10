@@ -1,0 +1,23 @@
+<div class="container-fluid">
+
+    <img id="background-img" src="{{movie.poster}}" alt="Cannot display picture">
+
+    <div class="container parent">
+        <div class="section1">
+            <img src="{{movie.poster}}" alt="Cannot fetch">
+        </div>
+        <div class="section2">
+            <h1>{{movie.title}}</h1>
+            <h6>({{ movie.year }})</h6>
+            <div class="rating-area">
+                <div class="pie animate" style="--p:{{movie.rating}};--c:lightgreen"> {{movie.rating}}%</div>
+                <h6>User<br>Score</h6>
+                <div class="options"><img id="fav-icon" src="../../../assets/images/favourite.svg" alt="Cannot fetch"></div>
+                <div class="options"><img id="bookmark-icon" src="../../../assets/images/bookmark.svg" alt="Cannot fetch"></div>
+                <div class="options"><img id="rate-icon" src="../../../assets/images/star.svg" alt="Cannot fetch"></div>
+            </div>
+            <h5>Overview</h5>
+            <p>{{movie.desc}}</p>
+        </div>
+    </div>
+</div>
